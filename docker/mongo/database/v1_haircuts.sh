@@ -1,0 +1,1 @@
+mongosh -u root -p root --authenticationDatabase admin localhost/scheduling-service --eval 'db.createUser({ user: "root", pwd: "root", roles: [ { role: "root", db: "admin" }, { role: "dbOwner", db: "scheduling-service" }, { role: "readWrite", db: "scheduling-service" }, { role: "dbAdmin", db: "scheduling-service" } ] });'
